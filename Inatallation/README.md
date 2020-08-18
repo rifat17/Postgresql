@@ -28,6 +28,7 @@ Now we have switched to postgresql user. After this step, we should be able to s
 
 
 Now we have to initialize a database cluster. Without the database cluster Pstgresql won't work. For that we have to use
+
 `postgres:~ $ initdb -D /var/lib/postgres/data`
 
 After successful execution of the command we will see the following lines of text
@@ -83,5 +84,5 @@ Become the postgres user. Start the primary database shell using psql command. H
 `psql -d myDatabaseName`
 
 ## Optional configuration
-For optional configuration such as Restricts access rights to the database superuser by default, please visit [https://wiki.archlinux.org/index.php/PostgreSQL#Optional_configuration](Arch wiki)
+For optional configuration such as Restricts access rights to the database superuser by default, please visit [Arch Wiki](https://wiki.archlinux.org/index.php/PostgreSQL#Optional_configuration)
 
