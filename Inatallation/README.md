@@ -29,6 +29,7 @@ Now we have switched to postgresql user. After this step, we should be able to s
 
 Now we have to initialize a database cluster. Without the database cluster Pstgresql won't work. For that we have to use
 `postgres:~ $ initdb -D /var/lib/postgres/data`
+
 After successful execution of the command we will see the following lines of text
 
 ```
@@ -62,18 +63,23 @@ Success. You can now start the database server using:
 
 # Start the server
 To Start postgresql server on Arch linux based distributions we have to use the following command.
+
 `sudo systemctl enable --now postgresql.service`
+
 This command will also bind postgresql service to startup so we don't have to restart the server again after a reboot.
 
 ## Create first user and database
 Switched to postgresql user shown in [initial configuration](#initial-configuration) and enter the following command to create the first user
 
 `createuser --interactive`
+
 Create a new database over which the above user has read/write privileges using the createdb command (execute this command from your login shell if the database user has the same name as your Linux user, otherwise add -O database-username to the following command):
+
 `createdb myDatabaseName`
 
 # Access the database shell
 Become the postgres user. Start the primary database shell using psql command. Here you can do all your creation of databases/tables, deletion, set permissions, and run raw SQL commands. Use the -d option to connect to the database you created (without specifying a database, psql will try to access a database that matches your username).
+
 `psql -d myDatabaseName`
 
 ## Optional configuration
