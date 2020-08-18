@@ -1,9 +1,9 @@
 # Task List
 
 - [ ] PostgreSQL Installation Process for Arch Linux and its derivatives.
+---
 
 # Getting Started
----
 These instructions will help in installing Postgresql and running a Postgresql server in Arch Linux and its derivatives.
 
 ## Prerequisite
@@ -23,6 +23,7 @@ For Installing Postgresql on arch linux we can have to use the following command
 To config a Postsql server we have to login as a `postgresql` user. To do that we have to use a simple command:
 
 `sudo -iu postgres`
+
 Now we have switched to postgresql user. After this step, we should be able to see posegresql user name as `postgres:~ $` , It might look slightly different based on terminal configuartion and shell.
 
 
@@ -65,7 +66,7 @@ To Start postgresql server on Arch linux based distributions we have to use the 
 This command will also bind postgresql service to startup so we don't have to restart the server again after a reboot.
 
 ## Create first user and database
-Switched to postgresql user shown in [initial configuration](initial-configuration) and enter the following command to create the first user
+Switched to postgresql user shown in [initial configuration](#initial-configuration) and enter the following command to create the first user
 
 `createuser --interactive`
 Create a new database over which the above user has read/write privileges using the createdb command (execute this command from your login shell if the database user has the same name as your Linux user, otherwise add -O database-username to the following command):
